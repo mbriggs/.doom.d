@@ -28,8 +28,8 @@
        :ui
        ;;deft              ; notational velocity for Emacs
        doom              ; what makes DOOM look the way it does
-       doom-dashboard    ; a nifty splash screen for Emacs
-       doom-quit         ; DOOM quit-message prompts when you quit Emacs
+       ;; doom-dashboard    ; a nifty splash screen for Emacs
+       ;; doom-quit         ; DOOM quit-message prompts when you quit Emacs
        ;;fill-column       ; a `fill-column' indicator
        hl-todo           ; highlight TODO/FIXME/NOTE/DEPRECATED/HACK/REVIEW
        ;;hydra
@@ -52,7 +52,7 @@
 
        ; local
 
-       start-message
+       start-message-local
 
        :editor
        (evil +everywhere); come to the dark side, we have cookies
@@ -75,17 +75,11 @@
        undo              ; persistent, smarter undo for your inevitable mistakes
        vc                ; version-control and Emacs, sitting in a tree
 
-       ; local
-       evil+
-
        :term
        ;;eshell            ; the elisp shell that works everywhere
        ;;shell             ; simple shell REPL for Emacs
        ;;term              ; basic terminal emulator for Emacs
        vterm             ; the best terminal emulation in Emacs
-
-       ; local
-       vterm+
 
        :checkers
        syntax              ; tasing you for every semicolon you forget
@@ -102,7 +96,7 @@
        (eval +overlay)     ; run code, run (also, repls)
        gist              ; interacting with github gists
        lookup              ; navigate your code and its documentation
-       ;;lsp
+       lsp
        magit             ; a git porcelain for Emacs
        make              ; run make tasks from Emacs
        ;;pass              ; password manager for nerds
@@ -176,8 +170,6 @@
        ;;terra             ; Earth and Moon in alignment for performance.
        (web +lsp)               ; the tubes
        yaml              ; JSON, but readable
-       ; local
-       javascript+
 
        :email
        (mu4e +gmail)
@@ -189,6 +181,15 @@
        irc               ; how neckbeards socialize
        ;; (rss +org)        ; emacs as an RSS reader
        ;;twitter           ; twitter client https://twitter.com/vnought
+
+       :local
+       ediff
+       epa
+       evil
+       gist
+       lsp
+       open-github
+       start-message       javascript-local
 
        :config
        ;;literate

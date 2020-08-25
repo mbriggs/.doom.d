@@ -1,4 +1,4 @@
-;;; editor/evil+/autoload.el -*- lexical-binding: t; -*-
+;;; editor/evil-local/autoload.el -*- lexical-binding: t; -*-
 
 
 ;;;###autoload

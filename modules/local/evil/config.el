@@ -1,4 +1,5 @@
-;;; editor/evil+/config.el -*- lexical-binding: t; -*-
+;;; editor/evil-local/config.el -*- lexical-binding: t; -*-
+(message "FILE RAN!!!!!!!!!!!!")
 
 
 (map!
@@ -36,5 +37,3 @@
 
 (advice-add '+workspace:switch-next :after #'+workspace/display)
 (advice-add '+workspace:switch-previous :after #'+workspace/display)
-
-(define-key key-translation-map (kbd "ESC") (kbd "C-g"))

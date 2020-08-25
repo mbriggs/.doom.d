@@ -7,8 +7,8 @@
 ;; + `doom-variable-pitch-font'
 ;; + `doom-big-font' -- used for `doom-big-font-mode'; use this for
 ;;   presentations or streaming.
-(setq doom-font (font-spec :family "JetBrains Mono" :size 21)
-      doom-variable-pitch-font (font-spec :family "JetBrains Mono" :size 21))
+(setq doom-font (font-spec :family "JetBrains Mono" :size 26)
+      doom-variable-pitch-font (font-spec :family "JetBrains Mono" :size 26))
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
@@ -27,7 +27,7 @@
 
 (setq prescient-filter-method '(literal initialism))
 ;; (setq company-dabbrev-downcase 0)
-(setq company-idle-delay 0.5)
+;; (setq company-idle-delay 0.5)
 
 (setq display-line-numbers-type t)
 
