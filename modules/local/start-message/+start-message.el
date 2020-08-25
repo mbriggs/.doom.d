@@ -45,4 +45,4 @@
 (setq-default initial-scratch-message
   (concat ";; " (mb/fortune) "\n\n"))
 
-(setq initial-major-mode 'elisp-mode)
+(setq initial-major-mode 'emacs-lisp-mode)

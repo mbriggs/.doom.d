@@ -7,6 +7,11 @@
 ;; + `doom-variable-pitch-font'
 ;; + `doom-big-font' -- used for `doom-big-font-mode'; use this for
 ;;   presentations or streaming.
+
+(setq mb--font-size
+      (if IS-MAC 15
+        26))
+
 (setq doom-font (font-spec :family "JetBrains Mono" :size 26)
       doom-variable-pitch-font (font-spec :family "JetBrains Mono" :size 26))
 

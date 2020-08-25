@@ -1,0 +1,13 @@
+#!/bin/env bash
+
+sudo npm install -g @angular/language-service@next typescript @angular/language-server bash-language-server vscode-css-languageserver-bin dockerfile-language-server-nodejs vscode-html-languageserver-bin typescript typescript-language-server vscode-json-languageserver
+gem install solargraph
+pip install cmake-language-server
+echo "installing go based tooling...."
+go get -u github.com/lighttiger2505/sqls
+go get -u github.com/motemen/gore/cmd/gore
+go get -u github.com/stamblerre/gocode
+go get -u golang.org/x/tools/...
+go get -u github.com/cweill/gotests/...
+go get -u github.com/fatih/gomodifytags
+echo "done"
