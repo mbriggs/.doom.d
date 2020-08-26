@@ -15,6 +15,15 @@
 (setq doom-font (font-spec :family "JetBrains Mono" :size mb--font-size)
       doom-variable-pitch-font (font-spec :family "JetBrains Mono" :size mb--font-size))
 
+(setq
+ lsp-completion-provider :capf
+ lsp-enable-semantic-highlighting nil
+ lsp-enable-symbol-highlighting nil)
+
+(add-hook! 'flycheck-mode-hook :append
+  (defun +increase-delay ()
+    (setq flycheck-display-errors-delay 2.5)))
+
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
