@@ -11,3 +11,6 @@ go get -u golang.org/x/tools/...
 go get -u github.com/cweill/gotests/...
 go get -u github.com/fatih/gomodifytags
 echo "done"
+
+echo "Linux: yay ktlint kotlin-language-server"
+echo "Linux: sudo pacman -Syu scrot gifsicle"

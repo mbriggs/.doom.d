@@ -45,5 +45,7 @@
 
 (setq display-line-numbers-type t)
 
+;; needed for things like LSP to not suck
+(setq read-process-output-max (* 4 (* 1024 1024)))
 
 (add-hook! 'snippet-mode-hook #'+yas-snippet-newline-h)

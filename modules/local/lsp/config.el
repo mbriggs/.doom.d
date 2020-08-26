@@ -1,6 +1,7 @@
 ;;; tools/lsp+/config.el -*- lexical-binding: t; -*-
 
 (setq
+  lsp-completion-provider :capf
   lsp-ui-sideline-show-diagnostics nil
   lsp-ui-sideline-show-hover nil
   lsp-ui-sideline-show-code-actions nil)
