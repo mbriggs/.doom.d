@@ -12,8 +12,8 @@
       (if IS-MAC 15
         26))
 
-(setq doom-font (font-spec :family "JetBrains Mono" :size 26)
-      doom-variable-pitch-font (font-spec :family "JetBrains Mono" :size 26))
+(setq doom-font (font-spec :family "JetBrains Mono" :size mb--font-size)
+      doom-variable-pitch-font (font-spec :family "JetBrains Mono" :size mb--font-size))
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
