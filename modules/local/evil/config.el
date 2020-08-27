@@ -1,10 +1,15 @@
-;;; editor/evil-local/config.el -*- lexical-binding: t; -*-
-(message "FILE RAN!!!!!!!!!!!!")
+;;; local/evil/config.el -*- lexical-binding: t; -*-
 
 
 (map!
   :n "L" #'mb/end-of-line
   :n "H" #'mb/start-of-line
+  :ni "C-k" #'mb/scroll-up-line
+  :ni "C-k" #'mb/scroll-up-line
+  :ni "C-k" #'mb/scroll-up-line
+  :ni "C-k" #'mb/scroll-up-line
+  :ni "C-k" #'mb/scroll-up-line
+  :ni "C-j" #'mb/scroll-down-line
 
   :n "RET" #'mb/evil-n-ret
 

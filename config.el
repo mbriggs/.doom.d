@@ -15,11 +15,6 @@
 (setq doom-font (font-spec :family "JetBrains Mono" :size mb--font-size)
       doom-variable-pitch-font (font-spec :family "JetBrains Mono" :size mb--font-size))
 
-(setq
- lsp-completion-provider :capf
- lsp-enable-semantic-highlighting nil
- lsp-enable-symbol-highlighting nil)
-
 (add-hook! 'flycheck-mode-hook :append
   (defun +increase-delay ()
     (setq flycheck-display-errors-delay 2.5)))
