@@ -19,6 +19,8 @@
   (defun +increase-delay ()
     (setq flycheck-display-errors-delay 2.5)))
 
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
