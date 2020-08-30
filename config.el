@@ -8,6 +8,9 @@
 ;; + `doom-big-font' -- used for `doom-big-font-mode'; use this for
 ;;   presentations or streaming.
 
+(setq mac-option-modifier 'super
+      mac-command-modifier 'meta)
+
 (setq mb--font-size
       (if IS-MAC 15
         26))
