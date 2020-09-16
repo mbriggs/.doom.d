@@ -5,10 +5,6 @@
   :n "L" #'mb/end-of-line
   :n "H" #'mb/start-of-line
   :ni "C-k" #'mb/scroll-up-line
-  :ni "C-k" #'mb/scroll-up-line
-  :ni "C-k" #'mb/scroll-up-line
-  :ni "C-k" #'mb/scroll-up-line
-  :ni "C-k" #'mb/scroll-up-line
   :ni "C-j" #'mb/scroll-down-line
 
   :n "RET" #'mb/evil-n-ret
@@ -39,6 +35,11 @@
   (evil-ex-nohighlight)
   (save-buffer)
   (+workspace/display))
+
+(add-hook 'typescript-mode
+          (lambda ()
+            (format-all-mode)
+            (add-to-list 'evil-embrace-evil-surround-keys ?`)))
 
 (advice-add '+workspace:switch-next :after #'+workspace/display)
 (advice-add '+workspace:switch-previous :after #'+workspace/display)

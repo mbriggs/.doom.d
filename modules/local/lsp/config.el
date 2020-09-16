@@ -5,6 +5,7 @@
   lsp-enable-semantic-highlighting nil
   lsp-enable-symbol-highlighting nil
   lsp-ui-sideline-show-diagnostics nil
+  lsp-eldoc-render-all nil
   lsp-ui-sideline-show-hover nil
   lsp-ui-sideline-show-code-actions nil)
 

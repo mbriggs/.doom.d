@@ -15,8 +15,23 @@
       (if IS-MAC 15
         26))
 
+(setq mb--day-theme 'doom-one-light
+      mb--night-theme 'doom-one
+      mb--theme 'doom-one-light)
+
 (setq doom-font (font-spec :family "JetBrains Mono" :size mb--font-size)
-      doom-variable-pitch-font (font-spec :family "JetBrains Mono" :size mb--font-size))
+      doom-variable-pitch-font (font-spec :family "JetBrains Mono" :size mb--font-size)
+      doom-themes-enable-bold t
+      doom-themes-enable-italic t
+      doom-theme mb--theme)
+
+(defun mb/day-theme ()
+  (interactive)
+  (load-theme mb--day-theme t))
+
+(defun mb/night-theme ()
+  (interactive)
+  (load-theme mb--night-theme t))
 
 (add-hook! 'flycheck-mode-hook :append
   (defun +increase-delay ()
