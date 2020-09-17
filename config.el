@@ -14,12 +14,13 @@
 
 (defun mb/linux-font-size ()
   (let ((dpi-file (expand-file-name "~/.mb-dpi"))
-        (divisor 8)
         (default-font-size 26))
 
     (if (file-exists-p dpi-file)
         (let ((dpi (string-to-number (f-read-text dpi-file))))
-          (/ dpi 8))
+          (cond ((> dpi 300) 46) ; xps 13
+                ((> dpi 120) 26) ; desktop
+                (t default-font-size)))
       default-font-size)))
 
 (defvar mb--font-size
@@ -31,6 +32,7 @@
       mb--theme 'doom-one-light)
 
 (setq doom-font (font-spec :family "JetBrains Mono" :size mb--font-size)
+      doom-big-font (font-spec :family "JetBrains Mono" :size (* 2 mb--font-size))
       doom-variable-pitch-font (font-spec :family "JetBrains Mono" :size mb--font-size)
       doom-themes-enable-bold t
       doom-themes-enable-italic t
