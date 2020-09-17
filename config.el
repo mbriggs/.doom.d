@@ -1,4 +1,5 @@
 ;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
+(require 'f)
 
 (setq user-full-name "Matt Briggs"
       user-mail-address "matt@mattbriggs.net")
@@ -11,9 +12,19 @@
 (setq mac-option-modifier 'super
       mac-command-modifier 'meta)
 
-(setq mb--font-size
+(defun mb/linux-font-size ()
+  (let ((dpi-file (expand-file-name "~/.mb-dpi"))
+        (divisor 8)
+        (default-font-size 26))
+
+    (if (file-exists-p dpi-file)
+        (let ((dpi (string-to-number (f-read-text dpi-file))))
+          (/ dpi 8))
+      default-font-size)))
+
+(defvar mb--font-size
       (if IS-MAC 15
-        26))
+        (mb/linux-font-size)))
 
 (setq mb--day-theme 'doom-one-light
       mb--night-theme 'doom-one
